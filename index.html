@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/aa84853a98.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo1.png" alt="logo">
+                <i class="fa-solid fa-bars"></i>
+                <a href="#header">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skill</a>
+                <a href="#contact">Contact</a>
+                <i class="fa-solid fa-circle-xmark"></i>
+            </nav>
+            <div class="header-text">
+                <p>Front-End Developer</p>
+                <h1>Hi, I'm <span>Abhisek</span><br> Sahoo From India</h1>
+            </div>
+        </div>
+    </div>
+    <!-- <  ------------------about------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"> 
+                    <img src="Abhi2.jpg" alt="abhi pic">
+                </div>
+                <div class="about-col-1"> 
+                    <h1 class="sub-title">About Me</h1>
+                    <p> Hey, this is Abhisek side. I am currently pursuing my MCA at KiiT, Bhubaneswar and looking for a great future in IT sector. I am looking to work in a place which can help me improve my skills and has a positive environment which can enhance my growth as well. I am always curious about the modern technologies coming up and have the desire to learn about them and stay up to date with the latest trends in this field.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Projects')">Projects</p>
+                    </div>
+                         <div class="tab-contents active-tab" id="Education">
+                        <ul>
+                            <li><span>2022-2024</span><br>MCA(Current)</li>
+                            <li><span>2019-2022</span><br>Bsc in Computer Science</li>
+                            <li><span>2017-2019</span><br>12th</li>
+                            <li><span>2017</span><br>10th</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>1 Month</span><br>Web Development Internship At TXON</li>
+                            <li><span>1 Month</span><br>Web Development Internship At Ascent Academy</li>
+                        </ul>
+                    </div>
+                      <div class="tab-contents" id="Projects">
+                        <ul>
+                            <li><span>1.</span><br>Grocery App</li>
+                            <li><span>2.</span><br>Weather</li>
+                            <li><span>3.</span><br>Landing Page</li>
+                            <li><span>4.</span><br>Calculator</li>
+                            <li><span>5.</span><br>to-do list</li>
+                            <li><span>6.</span><br>personal Portfolio</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------Skill-------------- -->
+    <div id="skills">
+        <div class="container">
+            <h1 class="sub-title">My Skills</h1>
+            <div class="skills-list">
+               <div>
+                <i class="fa-solid fa-code"></i>    
+                <p>C</p>
+               </div>
+               <div>
+                <i class="fa-brands fa-java"></i>
+                <p>Java</p>
+               </div>
+               <div>
+                <i class="fa-solid fa-database"></i>
+                <p>MySql</p>
+               </div>
+               <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>Front-End</h2>
+                <p> HTML CSS JavaScript Bootstrap</p>
+               </div>
+               </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- -------------------- Contact----------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i> abhiseksahoo7735@example.com</p>
+                    <p> <i class="fa-solid fa-phone"></i> 7735937661</p>
+                    <p>contact@</p>
+                    <div class="social-ions">
+                        <a href="https://www.linkedin.com/in/sahoo-abhisek"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://instagram.com/alex_abhisek"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/AlexAbhisek"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <div class="btn-box">
+                        <a href="Abhisek's Resume.pdf" download class="btn">Download CV</a>
+                      </div>
+                      
+                   </div>
+                    <div class="contact-right">
+                        <form>
+                         <input type="text" name="Name" placeholder="Your Name" required>
+                         <input type="email" name="email" placeholder="Your Email" required>
+                         <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                         <button type="submit" class="btn-box">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Made by <i class="fa-solid fa-heart"></i>Abhisek </p>
+        </div>
+    </div>
+    <Script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+       
+    </Script>
+</body>
+</html>
